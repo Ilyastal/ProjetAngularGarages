@@ -7,12 +7,18 @@ import { CommercialRoutingModule } from './commercial/commercial-routing.module'
 import { MecanicRoutingModule } from './mecanic/mecanic-routing.module';
 import { CommercialComponent } from './commercial/commercial.component';
 import { MecanicComponent } from './mecanic/mecanic.component';
+import { MecanicienComponent } from './mecanicien/mecanicien/mecanicien.component';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommercialComponent,
-    MecanicComponent
+    MecanicComponent,
+    MecanicienComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
