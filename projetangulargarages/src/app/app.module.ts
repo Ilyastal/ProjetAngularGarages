@@ -4,21 +4,25 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommercialRoutingModule } from './commercial/commercial-routing.module';
-import { MecanicRoutingModule } from './mecanic/mecanic-routing.module';
+
 import { CommercialComponent } from './commercial/commercial.component';
-import { MecanicComponent } from './mecanic/mecanic.component';
+import { MecanicienComponent } from './mecanicien/mecanicien.component';
+import { MecanicienRoutingModule } from './mecanicien/mecanicien-routing.module';
+import { ClientsComponent } from './commercial/clients/components/clients.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CommercialComponent,
-    MecanicComponent
+    MecanicienComponent,
+    ClientsComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommercialRoutingModule,
-    MecanicRoutingModule
+    MecanicienRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
