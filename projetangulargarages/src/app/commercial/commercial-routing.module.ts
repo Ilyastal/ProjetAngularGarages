@@ -7,6 +7,7 @@ import { SuiviscommandesComponent } from './suiviscommandes/components/suiviscom
 import { VoituresComponent } from './voitures/components/voitures.component';
 import { LoginsComponent } from '../core/logins/components/logins.component';
 import { ListedevisComponent } from './listedevis/component/listedevis.component';
+import { ListeclientComponent } from './listeclient/component/listeclient.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path: 'voitures', component: VoituresComponent },
   {path: 'logins', component: LoginsComponent},
   {path: 'listedevis', component: ListedevisComponent},
-  {path: 'listeclient', component: ListedevisComponent},
+  {path: 'listeclient', component: ListeclientComponent},
 ];
 
 @NgModule({

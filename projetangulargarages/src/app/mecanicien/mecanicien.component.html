@@ -3,29 +3,47 @@
  mettre dans un bouton de retour un routerlink sur MecanicienComponent
 
 -->
+  <div class="pack">
 
-
-
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Mecanicien</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item ">
-          <a class="nav-link" [routerLink]="['/stock']">Stock des pièces</a>
-        </li>
-        
-
-        <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/fiches']">Liste des taches</a>
-          </li>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <h2 class="text-white" >Mecanicien</h2>
           
-        
-      </ul>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            
+            
+          </div>
+        </nav>
       
-    </div>
-  </nav>
-
+      
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-dark p-4">
+      
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item ">
+                        <a class="nav-link" [routerLink]="['/stock']">Stock des pièces</a>
+                      </li>
+                      
+              
+                      <li class="nav-item">
+                          <a class="nav-link" [routerLink]="['/fiches']">Liste des taches</a>
+                        </li>
+                        
+                      
+                    </ul>
+                    
+                
+              </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+          </div>
+      
+      
+        </div>

@@ -4,10 +4,10 @@
     <div class="row">
 
 
-            <div class="col-sm-2"><h1>Logo</h1></div>
+            <div class="col-sm-2"><h1 [routerLink]="['/commercial']">Logo</h1></div>
             <div class="col-sm-2"><h1>Ini</h1></div>
                 
-            <div class="col-sm-6"><h1>Création de devis</h1></div>
+            <div class="col-sm-6"><h1>Creation devis</h1></div>
 
             <div class="col-sm-2"><h1 [routerLink]="['/logins']"><img src="../../../../assets/img/logout.png" alt=""></h1></div>
     </div>
@@ -16,10 +16,11 @@
     <div class="second_block">
    
     <div class="row">
-        <div class="col-sm-4"><h1 id="stock" [routerLink]="['/listedevis']">Liste devis</h1></div>
-           <div class="col-sm-6"><h1 id="stock" [routerLink]="['/voitures']">Voitures</h1></div>
-          </div>
-           <div class="row">
+        
+           <div class="col-sm-4"><h1 id="stock" [routerLink]="['/voitures']">Voitures</h1></div>
+        
+           
+              <div class="col-sm-4"><h1 id="stock" [routerLink]="['/listedevis']">Liste devis</h1></div>
            <div class="col-sm-4"><h1 id="stock" [routerLink]="['/listeclient']">Liste client</h1></div>
            
           
@@ -56,13 +57,13 @@
                   </div>
                   <div class="form-group">
                         <label for="staticQuantité">Quantité:</label>
-                        <input type="text" class="form-control" id="staticQuantité" >
+                        <input type="text" class="form-control" id="staticQuantité"  required>
                       </div>
                       <div class="form-group">
-                            <label for="staticDescription">description du produit:</label>
-                            <div class="col-sm-11">
+                            <label for="staticDescription">Description du produit:</label>
+                           
                             <textarea class="form-control" id="staticDescription" rows="3"></textarea>
-                          </div>
+                         
                         </div>
 
                           <div class="form-group">

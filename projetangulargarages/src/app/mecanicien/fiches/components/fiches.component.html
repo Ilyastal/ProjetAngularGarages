@@ -2,7 +2,7 @@
     <div class="row">
 
 
-            <div class="col-sm-2"><h1>Logo</h1></div>
+            <div class="col-sm-2"><h1 [routerLink]="['/mecanicien']">Logo</h1></div>
             <div class="col-sm-2"><h1>Ini</h1></div>
                 
             <div class="col-sm-6"><h1>Liste des taches</h1></div>
@@ -19,64 +19,67 @@
     <hr>
 </div> 
     <br>
-    
-<div class="row">
-<div class="col-sm-6"><h1>NomTache1</h1><h4 input type="text"class="imp">Importance</h4></div>
-<div class="col-sm-3 offset-2"><h1 input type="button" class="but">A faire</h1></div>
-</div>
-<div class="row">
-    <div class="col-sm-12"> 
-            <p> 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Facilis officia ab delectus recusandae error impedit nisi,
-                    fuga rem consequuntur qui cum atque eveniet, nostrum saepe ullam culpa beatae quo adipisci!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                     Labore aspernatur provident cupiditate ex hic tempore similique est recusandae rem,
-                    aliquam odit quod. A aliquam ipsam illo nostrum aspernatur ratione repellendus.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur enim animi temporibus natus corrupti dolore, ut velit dolorum illum quo dignissimos quibusdam
-                    est nemo expedita nulla repudiandae asperiores omnis sint.
-                    </p></div>
+
+
+   
+    <form>
+                <div class="form-group">
+                       <div class="col-sm-3"><h4 input type="text"class="imp">Importance</h4></div>
+                       
+                       <label for="tacheDescription">Description de la tache:</label>
                       
-</div>
-<br><hr> 
-<div class="row">
-            <div class="col-sm-6"><h1>NomTache1</h1><h4 input type="text"class="imp">Importance</h4></div>
-            <div class="col-sm-3 offset-2"><h1 input type="button" class="but">A faire</h1></div>
-             </div>
-           
-             <div class="row">
-                            <div class="col-sm-12"> 
-                                    <p> 
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                            Facilis officia ab delectus recusandae error impedit nisi,
-                                            fuga rem consequuntur qui cum atque eveniet, nostrum saepe ullam culpa beatae quo adipisci!
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                             Labore aspernatur provident cupiditate ex hic tempore similique est recusandae rem,
-                                            aliquam odit quod. A aliquam ipsam illo nostrum aspernatur ratione repellendus.
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur enim animi temporibus natus corrupti dolore, ut velit dolorum illum quo dignissimos quibusdam
-                                            est nemo expedita nulla repudiandae asperiores omnis sint.
-                                            </p></div>
-                                        
-                    </div>
-                    <br> <hr>
-                    <div class="row">
-                                    <div class="col-sm-6"><h1>NomTache1</h1><h4 input type="text"class="imp">Importance</h4></div>
-                                    <div class="col-sm-3 offset-2"><h1 input type="button" class="but">A faire</h1></div>
+                       
+                                                      
+                       <textarea class="form-control" id="tacheDescription" rows="3"></textarea>
+                                                    
+                             </div>
+                           
+               
+               
+                                 <div class="form-group">
+                                       <label for="tachePiece">Piece utillisé:</label>
+                                       <input type="text" class="form-control" id="tachePiece"  required>
                                      </div>
-                                     <div class="row">
-                                                    <div class="col-sm-12"> 
-                                                            <p> 
-                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                                                    Facilis officia ab delectus recusandae error impedit nisi,
-                                                                    fuga rem consequuntur qui cum atque eveniet, nostrum saepe ullam culpa beatae quo adipisci!
-                                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                                                     Labore aspernatur provident cupiditate ex hic tempore similique est recusandae rem,
-                                                                    aliquam odit quod. A aliquam ipsam illo nostrum aspernatur ratione repellendus.
-                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur enim animi temporibus natus corrupti dolore, ut velit dolorum illum quo dignissimos quibusdam
-                                                                    est nemo expedita nulla repudiandae asperiores omnis sint.
-                                                                    </p></div>
-                                                                
-                                            </div>
-                                            <br><hr>
+                                     
+               
+                                         <div class="form-group">
+                                               <label for="tacheValidation">Tache terminée:</label>
+                                               <input type="checkbox" class="form-control" id="tacheValidation">
+                                                 
+                                               </div>
+               
+                                        
+                      </form>
+                      <hr>
+                      <form>
+                                <div class="form-group">
+                                       <div class="col-sm-3"><h4 input type="text"class="imp">Importance</h4></div>
+                                       
+                                       <label for="tacheDescription">Description de la tache:</label>
+                                      
+                                       
+                                                                      
+                                       <textarea class="form-control" id="tacheDescription" rows="3"></textarea>
+                                                                    
+                                             </div>
+                                           
+                               
+                               
+                                                 <div class="form-group">
+                                                       <label for="tachePiece">Piece utillisé:</label>
+                                                       <input type="text" class="form-control" id="tachePiece"  required>
+                                                     </div>
+                                                     
+                               
+                                                         <div class="form-group">
+                                                               <label for="tacheValidation">Tache terminée:</label>
+                                                               <input type="checkbox" class="form-control" id="tacheValidation">
+                                                                 
+                                                               </div>
+                               
+                                                        
+                                      </form>
+                                      <hr>
     
+
 
