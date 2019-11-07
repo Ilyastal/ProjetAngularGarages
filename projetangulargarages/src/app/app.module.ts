@@ -15,6 +15,8 @@ import { FichesComponent } from './mecanicien/fiches/components/fiches.component
 import { DevisComponent } from './commercial/devis/components/devis.component';
 import { VoituresComponent } from './commercial/voitures/components/voitures.component';
 import { SuiviscommandesComponent } from './commercial/suiviscommandes/components/suiviscommandes.component';
+import { ListeclientComponent } from './commercial/listeclient/component/listeclient.component';
+import { ListedevisComponent } from './commercial/listedevis/component/listedevis.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { SuiviscommandesComponent } from './commercial/suiviscommandes/component
     VoituresComponent,
     DevisComponent,
     SuiviscommandesComponent,
+    ListeclientComponent,
+    ListedevisComponent,
     
 
     
