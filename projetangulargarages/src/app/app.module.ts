@@ -9,13 +9,20 @@ import { CommercialComponent } from './commercial/commercial.component';
 import { MecanicienComponent } from './mecanicien/mecanicien.component';
 import { MecanicienRoutingModule } from './mecanicien/mecanicien-routing.module';
 import { ClientsComponent } from './commercial/clients/components/clients.component';
+import { LoginsComponent } from './core/logins/components/logins.component';
+import { StockspiecesComponent } from './mecanicien/stockspieces/components/stockspieces.component';
+import { FichesComponent } from './mecanicien/fiches/components/fiches.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CommercialComponent,
     MecanicienComponent,
-    ClientsComponent
+    ClientsComponent,
+    LoginsComponent,
+    StockspiecesComponent,
+    FichesComponent
    
   ],
   imports: [
