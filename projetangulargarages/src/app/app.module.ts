@@ -12,17 +12,30 @@ import { ClientsComponent } from './commercial/clients/components/clients.compon
 import { LoginsComponent } from './core/logins/components/logins.component';
 import { StockspiecesComponent } from './mecanicien/stockspieces/components/stockspieces.component';
 import { FichesComponent } from './mecanicien/fiches/components/fiches.component';
+import { DevisComponent } from './commercial/devis/components/devis.component';
+import { VoituresComponent } from './commercial/voitures/components/voitures.component';
+import { SuiviscommandesComponent } from './commercial/suiviscommandes/components/suiviscommandes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommercialComponent,
-    MecanicienComponent,
-    ClientsComponent,
+
     LoginsComponent,
+    
+    MecanicienComponent,
     StockspiecesComponent,
-    FichesComponent
+    FichesComponent,
+
+    CommercialComponent,
+    ClientsComponent,
+    
+    VoituresComponent,
+    DevisComponent,
+    SuiviscommandesComponent,
+    
+
+    
    
   ],
   imports: [
