@@ -1,33 +1,63 @@
+<div class="pack">
 
-<div class="first_block">
-    <div class="row">
-
-
-            <div class="col-sm-2"><h1 [routerLink]="['/commercial']">Logo</h1></div>
-            <div class="col-sm-2"><h1>Ini</h1></div>
-                
-            <div class="col-sm-6"><h1>Creation client</h1></div>
-
-            <div class="col-sm-2"><h1 [routerLink]="['/logins']"><img src="../../../../assets/img/logout.png" alt=""></h1></div>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      
+      <div class="col-sm-3"><h2 class="text-white" >Commercial </h2></div>
+      <div class="col-sm-6 offset-1"><h2 class="text-white" >Création des clients </h2></div>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        
+        
+      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <i class="materiel" [routerLink]="['/logins']">power_settings_new</i>
+     </form>
+    </nav>
+  
+  
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+  
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item ">
+                    <a class="nav-link" [routerLink]="['/voitures']">Liste voitures</a>
+                  </li>
+                  <li class="nav-item ">
+                      <a class="nav-link" [routerLink]="['/devis']">Creation devis</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" [routerLink]="['/listedevis']">Liste devis</a>
+                      </li>
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link" [routerLink]="['/listeclient']">Liste client</a>
+                      </li>
+            
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/suiviscommandes']">Suivis Commandes</a>
+                    </li>
+                    
+                  
+                </ul>
+            
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+        
+      </div>
+  
+  
     </div>
-    </div>
 
-    <div class="second_block">
-   
-    <div class="row">
-           <div class="col-sm-5"><h1 id="stock" [routerLink]="['/devis']">Creation devis</h1></div>
-           <div class="col-sm-5"><h1 id="stock" [routerLink]="['/listeclient']">Liste client</h1></div>
-          
-          
-           
-          
-    </div>
-    <hr>
-</div>
-
-<br>
-
-
+    <br><br>
 
 <form>
         <div class="form-group row">

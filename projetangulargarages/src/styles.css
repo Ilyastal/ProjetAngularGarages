@@ -1,5 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
+.materiel{
+   font-family: 'Material Icons';
+   color: white;
+   font-weight: normal;
+   font-style: normal;
+   cursor: pointer;
+   font-size: 28px;
+}
+
+.container{
+margin: 10px 10px 10px 10px;
+
+
+}
+
+.center-block{
+    margin: 0 auto;
+}
+
+.container h1{
+    font-size: 210%;
+    text-align: center;
+}
+
 a{
    font-size: 20px; 
    color:white;
@@ -131,7 +157,7 @@ h1{
 }
 .imp {
 border: 1px solid black;
-width:60%;
+width:100%;
 height: 35px;
 background-color: yellow;
 border-radius: 10px 10px 10px 10px;

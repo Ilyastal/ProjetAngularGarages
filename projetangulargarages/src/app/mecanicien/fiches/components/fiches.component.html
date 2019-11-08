@@ -1,23 +1,46 @@
-<div class="first_block">
-    <div class="row">
-
-
-            <div class="col-sm-2"><h1 [routerLink]="['/mecanicien']">Logo</h1></div>
-            <div class="col-sm-2"><h1>Ini</h1></div>
-                
-            <div class="col-sm-6"><h1>Liste des taches</h1></div>
-            
-            <div class="col-sm-2"><h1 [routerLink]="['/logins']"><img src="../../../../assets/img/logout.png" alt=""></h1></div>
-    </div>
-    </div>
-    <div class="second_block">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     
-    <div class="row">
-           <div class="col-sm-3"><h1 id="stock" [routerLink]="['/stock']">Stock</h1></div>
-           <div class="col-sm-9"><span id="blank"></span></div>
+    <div class="col-sm-3"><h2 class="text-white" >Mecanicien </h2></div>
+
+    <div class="col-sm-5 offset-1"><h2 class="text-white" >Liste des taches </h2></div>
+    
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        
+      
     </div>
-    <hr>
-</div> 
+    <form class="form-inline my-2 my-lg-0">
+        <i class="materiel" [routerLink]="['/logins']">power_settings_new</i>
+     </form>
+  </nav>
+
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item ">
+                <a class="nav-link" [routerLink]="['/stock']">Stock des pièces</a>
+              </li>
+              
+      
+                
+              
+            </ul>
+            
+        
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
+
     <br>
 
 
