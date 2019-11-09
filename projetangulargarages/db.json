@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "client": [
+    {
+      "id": 1,
+      "nom": "Germain",
+      "prenom": "Christophe"
+    },
+    {
+      "id": 2,
+      "nom": "Martin",
+      "prenom": "Jeanne"
+    }
+    
+  ]
+}

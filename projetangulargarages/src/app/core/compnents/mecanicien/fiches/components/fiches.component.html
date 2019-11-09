@@ -1,0 +1,107 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    
+        <div class="col-sm-3"><h2 class="text-white" >Mecanicien </h2></div>
+    
+        <div class="col-sm-5 offset-1"><h2 class="text-white" >Liste des taches </h2></div>
+        
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            
+          
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <i class="materiel" [routerLink]="['/logins']">power_settings_new</i>
+         </form>
+      </nav>
+    
+      <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+    
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item ">
+                    <a class="nav-link" [routerLink]="['/mecanicien/stock']">Stock des pièces</a>
+                  </li>
+                  
+          
+                    
+                  
+                </ul>
+                
+            
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+    
+        <br>
+    
+    
+       
+        <form>
+                    <div class="form-group">
+                           <div class="col-sm-3"><h4 input type="text"class="imp">Importance</h4></div>
+                           
+                           <label for="tacheDescription">Description de la tache:</label>
+                          
+                           
+                                                          
+                           <textarea class="form-control" id="tacheDescription" rows="3"></textarea>
+                                                        
+                                 </div>
+                               
+                   
+                   
+                                     <div class="form-group">
+                                           <label for="tachePiece">Piece utillisé:</label>
+                                           <input type="text" class="form-control" id="tachePiece"  required>
+                                         </div>
+                                         
+                   
+                                             <div class="form-group">
+                                                   <label for="tacheValidation">Tache terminée:</label>
+                                                   <input type="checkbox" class="form-control" id="tacheValidation">
+                                                     
+                                                   </div>
+                   
+                                            
+                          </form>
+                          <hr>
+                          <form>
+                                    <div class="form-group">
+                                           <div class="col-sm-3"><h4 input type="text"class="imp">Importance</h4></div>
+                                           
+                                           <label for="tacheDescription">Description de la tache:</label>
+                                          
+                                           
+                                                                          
+                                           <textarea class="form-control" id="tacheDescription" rows="3"></textarea>
+                                                                        
+                                                 </div>
+                                               
+                                   
+                                   
+                                                     <div class="form-group">
+                                                           <label for="tachePiece">Piece utillisé:</label>
+                                                           <input type="text" class="form-control" id="tachePiece"  required>
+                                                         </div>
+                                                         
+                                   
+                                                             <div class="form-group">
+                                                                   <label for="tacheValidation">Tache terminée:</label>
+                                                                   <input type="checkbox" class="form-control" id="tacheValidation">
+                                                                     
+                                                                   </div>
+                                   
+                                                            
+                                          </form>
+                                          <hr>
+    
