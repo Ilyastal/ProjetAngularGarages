@@ -12,6 +12,7 @@ import { FichesComponent } from './core/compnents/mecanicien/fiches/components/f
 import { HttpClientModule } from '@angular/common/http';
 import { ClientcrudComponent } from './core/clientcrud/clientcrud.component';
 import { ServiceGenService } from './servicesCore/service-gen.service';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -26,7 +27,8 @@ import { ServiceGenService } from './servicesCore/service-gen.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
  
   ],
   providers: [ServiceGenService],

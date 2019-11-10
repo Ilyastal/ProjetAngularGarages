@@ -40,7 +40,7 @@
                       </li>
             
                   <li class="nav-item">
-                      <a class="nav-link" [routerLink]="['/suiviscommandes']">Suivis Commandes</a>
+                      <a class="nav-link" [routerLink]="['/commercial/suiviscommandes']">Suivis Commandes</a>
                     </li>
                     
                   
@@ -60,24 +60,26 @@
     </div>
 
     <br><br>
+
+  
                 
-<form id="form-voitures">
+<form id="form-voitures" *ngFor="let vo of listevoitures |async">
                 <div class="form-row">
                        <div class="form-col">
                        <label for="voitureMarque">Marque:</label>
                
-                       <input type="text" class="form-control" id="voitureMarque" disabled >
+                       <input type="text" class="form-control" id="voitureMarque" value="{{vo.marque}}" disabled >
                 </div>
                 
 
                 <div class="form-col">
                   <label for="voitureModel">Model:</label>
-                  <input type="text" class="form-control" id="voitureModel" disabled >
+                  <input type="text" class="form-control" id="voitureModel" value="{{vo.model}}" disabled >
                 </div>
 
                 <div class="form-col">
                 <label for="voitureCategorie">Categorie:</label>
-                <input type="text" class="form-control" id="voitureCategorie" disabled >
+                <input type="text" class="form-control" id="voitureCategorie" value="{{vo.categorie}}" disabled >
                  
                 </div>
         </div>
@@ -85,71 +87,26 @@
         <div class="form-row">
                         <div class="form-col">
                         <label for="voitureQuantité">Quantité:</label>
-                        <input type="text" class="form-control" id="voitureQuantité" disabled >
+                        <input type="text" class="form-control" id="voitureQuantité" value="{{vo.quantite}}" disabled >
                  </div>
  
                  <div class="form-col">
                    <label for="voiturePrixUnitaire">Prix Unitaire:</label>
-                   <input type="text" class="form-control" id="voiturePrixUnitaire" disabled >
+                   <input type="text" class="form-control" id="voiturePrixUnitaire" value="{{vo.prix_unitaire}}" disabled >
                  </div>
  
                  <div class="form-col">
                    <label for="voitureCouleur">Couleur:</label>
-                   <input type="text" class="form-control" id="voitureCouleur" disabled >
+                   <input type="text" class="form-control" id="voitureCouleur" value="{{vo.couleur}}" disabled >
                  </div>
          </div>
  
 
-                  
+         <hr>  
                              
                       
                 </form>
                 
-                <hr>
                 
-<form id="form-voitures">
-                <div class="form-row">
-                       <div class="form-col">
-                       <label for="voitureMarque">Marque:</label>
-               
-                       <input type="text" class="form-control" id="voitureMarque" disabled >
-                </div>
-                
-
-                <div class="form-col">
-                  <label for="voitureModel">Model:</label>
-                  <input type="text" class="form-control" id="voitureModel" disabled >
-                </div>
-
-                <div class="form-col">
-                <label for="voitureCategorie">Categorie:</label>
-                <input type="text" class="form-control" id="voitureCategorie" disabled >
-                 
-                </div>
-        </div>
-        <br>
-        <div class="form-row">
-                        <div class="form-col">
-                        <label for="voitureQuantité">Quantité:</label>
-                        <input type="text" class="form-control" id="voitureQuantité" disabled >
-                 </div>
- 
-                 <div class="form-col">
-                   <label for="voiturePrixUnitaire">Prix Unitaire:</label>
-                   <input type="text" class="form-control" id="voiturePrixUnitaire" disabled >
-                 </div>
- 
-                 <div class="form-col">
-                   <label for="voitureCouleur">Couleur:</label>
-                   <input type="text" class="form-control" id="voitureCouleur" disabled >
-                 </div>
-         </div>
- 
-
-                  
-                             
-                      
-                </form>
-                
-                <hr>
+          
 

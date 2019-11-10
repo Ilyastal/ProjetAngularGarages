@@ -23,8 +23,8 @@ export class ClientcrudComponent implements OnInit {
   doCreer(){
     let cl  : Client = {
     id : 0,
-    nom: "NCreation",
-    prenom:  "PCreation"
+    nom: "nom",
+    prenom:  "prenom"
   };
     this.servicegen.post(url, cl).subscribe(
       () => this.refresh()

@@ -59,18 +59,20 @@
 
     <br><br>
 
-<form>
+    
+
+<form (ngSubmit) ="doCreer()">
         <div class="form-group row">
           <label for="staticNom" class="col-sm-2 col-form-label">Nom</label>
           <div class="col-sm-5">
-            <input type="text" class="form-control-plaintext" id="staticNom" value="" required>
+            <input type="text" class="form-control-plaintext" id="staticNom" (ngModel)="cl.nom" required >
           </div>
         </div>
         <br>
         <div class="form-group row">
         <label for="staticPrenom" class="col-sm-2 col-form-label">Prenom</label>
         <div class="col-sm-5">
-            <input type="text" class="form-control-plaintext" id="staticPrenom" value="" required>
+            <input type="text" class="form-control-plaintext" id="staticPrenom"  required>
           </div>
         </div>
         <br>
