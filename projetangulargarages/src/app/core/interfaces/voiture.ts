@@ -1,16 +1,15 @@
 export interface Voiture{
-    
-    marque: string;
-    model: string;
+
+    id: number;
     categorie: string;
-    quantite : number;
-    prix_unitaire : number;
+    marque: string;
+    modele: string;
+    annee: number;
+    porte: number;
+    energie: string;
+    co2: number;
+    prixUnitaire: number;
     couleur: string;
-   CO2 : number;
-   annee:number;
-   energie: string;
-    
-
-
-
+    quantite: number;
+    photo: string
 }

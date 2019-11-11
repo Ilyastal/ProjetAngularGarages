@@ -48,58 +48,86 @@
  
 
      
-<div class="container">
+<!-- <div class="container">
   <div class="row">
         <div class="col-sm-2"><h1>Nom</h1></div>
         <div class="col-sm-2"><h1>Quantité</h1></div>
         <div class="col-sm-2 offset-1"><h1>Description</h1></div>
         <div class="col-sm-4 offset-1"><h1>Pièces défecteuses</h1></div>
        
-       
- </div><hr>
- <div class="row">
-     <div class="col-sm-3"><h3>pièces</h3></div>
-     <div class="col-sm-1"><h3>40</h3></div>
-     <div class="col-sm-2 offset-1"><h3><input type="text" size="9"></h3></div>
+           
+ </div>
+ <hr> -->
+ <!-- <div class="row" *ngFor="let piece of listPieces |async" style="border-bottom: 1px black solid;">
+   
+    <div class="col-sm-3"><h3>{{piece.nom}}</h3></div>
+     <div class="col-sm-1"><h3>{{piece.quantite}}</h3></div>
+     <div class="col-sm-2 offset-1">{{piece.description}}</div>
+     <hr>
 
 <div class="col-sm-1 offset-2"><h3><input type="checkbox" value="d" ></h3></div>
-</div>
-<hr>
-   <div class="row">
-     <div class="col-sm-3"><h3>pièces</h3></div>
-     <div class="col-sm-1"><h3>40</h3></div>
-     <div class="col-sm-2 offset-1"><h3><input type="text" size="9"></h3></div>
 
-<div class="col-sm-1 offset-2"><h3><input type="checkbox" value="d" ></h3></div>
-</div>
-<hr>
+</div> -->
+<form >
+  <label for="nom">Nom :</label>
+  <input class=""	type="text" >
+  <label for="prixUnitaire">Prix Unitaire :</label>
+  <input class="" type="text"  >
+  <label for="quantite">QuantitÃ© :</label>
+  <input class="" type="text">
+  <label for="description">Description :</label>
+  <input class="" type="text" >
+  <label for="typeLot">TypeLot :</label>
+  <input class="" type="text">
 
-<div class="row">
- <div class="col-sm-3"><h3>pièces</h3></div>
- <div class="col-sm-1"><h3>40</h3></div>
- <div class="col-sm-2 offset-1"><h3><input type="text" size="9"></h3></div>
+  <button type="submit" class="btn btn-primary">EnvoyÃ©</button>
+</form>
+     
+  
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Quantité</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type Lot</th>
+      <th scope="col">Pieces defectueuse</th>
+      <th scope="col">Ajouter Pieces defectueuse</th>
 
-<div class="col-sm-1 offset-2"><h3><input type="checkbox" value="d" ></h3></div>
-</div>
-<hr>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let piece of listPieces | async">
+      <th scope="row">{{piece.nom}}</th>
+      <td>{{piece.quantite}}</td>
+      <td>{{piece.description}}</td>
+      <td>{{piece.typeLot}}</td>
+      <td>
+        
+        <span *ngIf="piece.pieceDefectueuse > 0; else elseBlock" class="badge badge-warning">
+            {{piece.pieceDefectueuse}} piece defectueuse      
+        </span>
+        
+        <ng-template #elseBlock>
+            Aucune Piece defectueuse
+          </ng-template>      
+      </td>
+      <td><button type="button" class="btn btn-info btn-sm" (click)="doModifier(piece, true)"><i class="materiel">
+          add
+            </i>
+          </button>
+          <button type="button" class="btn btn-danger btn-sm" (click)="doModifier(piece, false)"><i class="materiel">
+              remove
+                </i></button>
+        </td>
+      
+    
+    </tr>
+    
+  </tbody>
 
-<div class="row">
-<div class="col-sm-3"><h3>pièces</h3></div>
-<div class="col-sm-1"><h3>40</h3></div>
-<div class="col-sm-2 offset-1"><h3><input type="text" size="9"></h3></div>
+</table>
 
-<div class="col-sm-1 offset-2"><h3><input type="checkbox" value="d" ></h3></div>
-</div>
-<hr>
 
-<div class="row">
-<div class="col-sm-3"><h3>pièces</h3></div>
-<div class="col-sm-1"><h3>40</h3></div>
-<div class="col-sm-2 offset-1"><h3><input type="text" size="9"></h3></div>
-
-<div class="col-sm-1 offset-2"><h3><input type="checkbox" value="d" ></h3></div>
-</div>
-<hr>
-</div>
   
 
