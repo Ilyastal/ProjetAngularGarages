@@ -62,67 +62,44 @@
     <br><br>
 
   
-    <hr>           
-<form id="form-voitures" *ngFor="let vo of listevoitures |async">
-                <div class="form-row">
-                       <div class="form-col">
-                       <label for="voitureMarque">Marque:</label>
-               
-                       <input type="text" class="form-control" id="voitureMarque" value="{{vo.marque}}" disabled >
-                </div>
-                
+  
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Model</th>
+          <th scope="col">Marque</th>
+          <th scope="col">Catégorie</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Prix Unitaire </th>
+          <th scope="col">Couleur</th>
+          <th scope="col">CO2</th>
+          <th scope="col">Année</th>
+          <th scope="col">Energie</th>
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let voiture of listevoitures | async">
+          <td>{{voiture.modele}}</td>
+          <td>{{voiture.marque}}</td>
+          <td>{{voiture.categorie}}</td>
+          <td>{{voiture.quantite}}</td>
+          <td>{{voiture.prixUnitaire}}</td>
+          <td>{{voiture.couleur}}</td>
+          <td>{{voiture.CO2}}</td>
+          <td>{{voiture.annee}}</td>
+          <td>{{voiture.energie}}</td>
+          
+            
+            
+            
+        
+        </tr>
+        
+      </tbody>
+    
+    </table>
 
-                <div class="form-col">
-                  <label for="voitureModel">Model:</label>
-                  <input type="text" class="form-control" id="voitureModel" value="{{vo.model}}" disabled >
-                </div>
-
-                <div class="form-col">
-                <label for="voitureCategorie">Categorie:</label>
-                <input type="text" class="form-control" id="voitureCategorie" value="{{vo.categorie}}" disabled >
-                 
-                </div>
-        </div>
-        <br>
-        <div class="form-row">
-                        <div class="form-col">
-                        <label for="voitureQuantité">Quantité:</label>
-                        <input type="text" class="form-control" id="voitureQuantité" value="{{vo.quantite}}" disabled >
-                 </div>
- 
-                 <div class="form-col">
-                   <label for="voiturePrixUnitaire">Prix Unitaire:</label>
-                   <input type="text" class="form-control" id="voiturePrixUnitaire" value="{{vo.prix_unitaire}}" disabled >
-                 </div>
- 
-                 <div class="form-col">
-                   <label for="voitureCouleur">Couleur:</label>
-                   <input type="text" class="form-control" id="voitureCouleur" value="{{vo.couleur}}" disabled >
-                 </div>
-                </div>
-                <br>
-                <div class="form-row">
-                 <div class="form-col">
-                  <label for="voitureCO2">CO2:</label>
-                  <input type="text" class="form-control" id="voitureCO2" value="{{vo.CO2}}" disabled >
-                </div>
-
-                <div class="form-col">
-                  <label for="voitureAnnee">Année:</label>
-                  <input type="text" class="form-control" id="voitureAnnee" value="{{vo.annee}}" disabled >
-                </div>
-
-                <div class="form-col">
-                  <label for="voitureEnergie">Energie:</label>
-                  <input type="text" class="form-control" id="voitureEnergie" value="{{vo.energie}}" disabled >
-                </div>
-         </div>
-       
- 
-<br>   <hr>           
-                      
-                </form>
-                
                 
           
 

@@ -3,7 +3,7 @@ import { Client } from '../../../../interfaces/client';
 import { Observable } from 'rxjs';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
 
-const url = 'http://localhost:3000/client';
+const url = 'http://localhost:8080/Rest/clients/';
 
 @Component({
   selector: 'app-listeclient',
@@ -12,12 +12,12 @@ const url = 'http://localhost:3000/client';
 })
 export class ListeclientComponent implements OnInit {
 
-  listcli : Observable<Client[]>;
+  listecli : Observable<Client[]>;
 
 
   constructor(private servicegen : ServiceGenService<Client>) { }
   refresh(){
-    this.listcli = this.servicegen.getall(url)
+    this.listecli = this.servicegen.getall(url)
   }
   ngOnInit() {
     this.refresh();

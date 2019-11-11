@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import{Voiture} from '../../../../interfaces/voiture';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
 
-const url='http://localhost:3000/voiture';
+const url='http://localhost:8080/Rest/voitures/';
 
 @Component({
   selector: 'app-voitures',
