@@ -61,18 +61,18 @@
 
     
 
-<form (ngSubmit) ="doCreer()">
+<form >
         <div class="form-group row">
           <label for="staticNom" class="col-sm-2 col-form-label">Nom</label>
           <div class="col-sm-5">
-            <input type="text" class="form-control-plaintext" id="staticNom" (ngModel)="cl.nom" required >
+            <input type="text" ngModel name="staticNom" class="form-control-plaintext" id="staticNom"  required #label="ngModel"(ngModel)="cl.nom" >
           </div>
         </div>
         <br>
         <div class="form-group row">
         <label for="staticPrenom" class="col-sm-2 col-form-label">Prenom</label>
         <div class="col-sm-5">
-            <input type="text" class="form-control-plaintext" id="staticPrenom"  required>
+            <input type="text" class="form-control-plaintext" id="staticPrenom"  value="" required>
           </div>
         </div>
         <br>
@@ -118,7 +118,7 @@
                                                         <div class="form-group row">
                                                                 <label for="staticValidation" class="col-sm-2 col-form-label"></label>
                                                                 <div class="col-sm-5">
-                                                                        <button type="submit">Créer le nouveau client</button>
+                                                                        <button type="submit" (click)="doCreer(client)" >Créer le nouveau client</button>
                                                                        
                                                                       </div>
                                                                 </div>

@@ -3,7 +3,7 @@ import { Client } from '../../../../interfaces/client';
 import { Observable } from 'rxjs';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
 
-const url = 'http://localhost:3000/client';
+const url = 'http://localhost:8080/Rest/clients/';
 
 @Component({
   selector: 'app-clients',
@@ -12,17 +12,19 @@ const url = 'http://localhost:3000/client';
 })
 export class ClientsComponent implements OnInit {
   listclients : Observable<Client[]>;
-
+client: Client;
 
   constructor(private servicegen : ServiceGenService<Client>) { }
   refresh(){
     this.listclients = this.servicegen.getall(url)
   }
   ngOnInit() {
-    this.refresh();
+    // this.client= new Client();
+      this.refresh();
+    
   }
 
-  doCreer(){
+  doCreer(client : Client){
     let cl  : Client = {
       id : 0,
       nom: "nom",
@@ -33,7 +35,7 @@ export class ClientsComponent implements OnInit {
       telephone: "0605040302",
       sexe: null,
   };
-    this.servicegen.post(url, cl).subscribe(
+    this.servicegen.post(url, client).subscribe(
       () => this.refresh()
     );
   }
