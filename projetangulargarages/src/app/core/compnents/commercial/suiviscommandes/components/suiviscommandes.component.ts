@@ -26,7 +26,7 @@ export class SuiviscommandesComponent implements OnInit {
   doCreer(){
       let commandeVoiture  : CommandeVoiture = {
       id: 0,
-      dateCommande: new Date(),
+      dateCommande: "",
       dateReception: new Date(),
       quantite: 0,
       dateCloture: new Date(),

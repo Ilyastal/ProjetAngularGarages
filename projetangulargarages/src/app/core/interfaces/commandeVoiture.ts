@@ -5,7 +5,7 @@ import { Devis } from './devis';
 
 export interface CommandeVoiture{
     id: number;
-    dateCommande: Date;
+    dateCommande: string;
     dateReception: Date;
     quantite: number;
     dateCloture: Date ;
