@@ -62,7 +62,7 @@
     <br><br>
 
   
-                
+    <hr>           
 <form id="form-voitures" *ngFor="let vo of listevoitures |async">
                 <div class="form-row">
                        <div class="form-col">
@@ -99,11 +99,27 @@
                    <label for="voitureCouleur">Couleur:</label>
                    <input type="text" class="form-control" id="voitureCouleur" value="{{vo.couleur}}" disabled >
                  </div>
-         </div>
- 
+                </div>
+                <br>
+                <div class="form-row">
+                 <div class="form-col">
+                  <label for="voitureCO2">CO2:</label>
+                  <input type="text" class="form-control" id="voitureCO2" value="{{vo.CO2}}" disabled >
+                </div>
 
-         <hr>  
-                             
+                <div class="form-col">
+                  <label for="voitureAnnee">Année:</label>
+                  <input type="text" class="form-control" id="voitureAnnee" value="{{vo.annee}}" disabled >
+                </div>
+
+                <div class="form-col">
+                  <label for="voitureEnergie">Energie:</label>
+                  <input type="text" class="form-control" id="voitureEnergie" value="{{vo.energie}}" disabled >
+                </div>
+         </div>
+       
+ 
+<br>   <hr>           
                       
                 </form>
                 

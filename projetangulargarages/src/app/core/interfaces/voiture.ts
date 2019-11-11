@@ -6,7 +6,9 @@ export interface Voiture{
     quantite : number;
     prix_unitaire : number;
     couleur: string;
-   
+   CO2 : number;
+   annee:number;
+   energie: string;
     
 
 
