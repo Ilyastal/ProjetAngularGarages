@@ -8,7 +8,7 @@ import { ListedevisComponent } from './listedevis/component/listedevis.component
 import { SuiviscommandesComponent } from './suiviscommandes/components/suiviscommandes.component';
 import { VoituresComponent } from './voitures/components/voitures.component';
 import { CommercialRoutingModule } from './commercial-routing.module';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +23,8 @@ import { CommercialRoutingModule } from './commercial-routing.module';
   ],
   imports: [
     CommonModule, 
-    CommercialRoutingModule
+    CommercialRoutingModule,
+    FormsModule
   ], 
   exports: [
     CommercialComponent,

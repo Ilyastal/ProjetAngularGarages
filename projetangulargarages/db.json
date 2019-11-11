@@ -19,14 +19,69 @@
   "client": [
     {
       "id": 1,
-      "nom": "Germain",
-      "prenom": "Christophe"
+      "nom": "Katz",
+      "prenom": "Axelle",
+      "adresse": "15 rue victor Hugo",
+      "ville": "Vénissieux",
+      "codepostal": "69200",
+      "telephone": "0652329812",
+      "sexe": "MADAME"
     },
     {
       "id": 2,
-      "nom": "Martin",
-      "prenom": "Jeanne"
+      "nom": "Mehidi",
+      "prenom": "Reda",
+      "adresse": "3 avenue du Général De Gaulle",
+      "ville": "Touarou",
+      "codepostal": "75400",
+      "telephone": "0798356241",
+      "sexe": "MONSIEUR"
+    },
+    {
+      "id": 3,
+      "nom": "POMA",
+      "prenom": "Lionel",
+      "adresse": "13 rue Albert 1er",
+      "ville": "Ville-Des-Vieux",
+      "codepostal": "56000",
+      "telephone": "0698784565",
+      "sexe": "MONSIEUR"
     }
-    
+  ],
+  
+  "voiture": [
+    {
+      "marque": "Audi",
+      "model": "A3",
+      "categorie": "Berline",
+      "quantite": 1,
+      "prix_unitaire": 6999,
+      "couleur": "Noire",
+      "energie": "Diesel",
+      "annee": "2018",
+      "CO2": 105
+    },
+    {
+      "marque": "Fiat",
+      "model": "Punto",
+      "categorie": "SUV",
+      "quantite": 3,
+      "prix_unitaire": 1999,
+      "couleur": "Blanche",
+      "energie": "Diesel",
+      "annee": "2008",
+      "CO2": 120
+    },
+    {
+      "marque": "Peugot",
+      "model": "3008",
+      "categorie": "SUV",
+      "quantite": 4,
+      "prix_unitaire": 8599,
+      "couleur": "Grise",
+      "energie": "Diesel",
+      "annee": "2017",
+      "CO2": 130
+    }
   ]
 }

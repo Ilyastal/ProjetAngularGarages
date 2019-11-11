@@ -1,4 +1,4 @@
-<!-- <p>clientcrud works!</p>
+<!--<p>clientcrud works!</p>
 
 <ul>
     <li *ngFor="let cl of listclients |async">
@@ -7,4 +7,17 @@
 </ul>
 <span (click)="doCreer()">Créer</span>
 <span (click)="doDelete()">delete</span>
-<span (click)="doModifier()">Modifier</span> -->
+<span (click)="doModifier()">Modifier</span> 
+
+<div *ngFor="let cl of listclients |async">
+<div class="form-col">
+    <label for="voitureModel">Model:</label>
+    <input type="text" class="form-control" id="voitureModel" value="{{cl.nom}}" disabled >
+  </div>
+
+  <div class="form-col">
+  <label for="voitureCategorie">Categorie:</label>
+  <input type="text" class="form-control" id="voitureCategorie"  value="{{cl.prenom}}"disabled >
+   
+  </div>
+</div>-->

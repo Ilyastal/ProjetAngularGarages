@@ -20,6 +20,7 @@ export class ListeclientComponent implements OnInit {
     this.listClients = this.serviceClient.getall(url)
   }
 
+  
   ngOnInit() {
     this.refresh();
   }
