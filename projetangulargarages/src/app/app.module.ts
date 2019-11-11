@@ -3,35 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CommercialRoutingModule } from './commercial/commercial-routing.module';
 
-import { CommercialComponent } from './commercial/commercial.component';
-import { MecanicienComponent } from './mecanicien/mecanicien.component';
-import { MecanicienRoutingModule } from './mecanicien/mecanicien-routing.module';
-import { ClientsComponent } from './commercial/clients/components/clients.component';
+import { MecanicienComponent } from './core/compnents/mecanicien/mecanicien.component';
+import { MecanicienRoutingModule } from './core/compnents/mecanicien/mecanicien-routing.module';
 import { LoginsComponent } from './core/logins/components/logins.component';
-import { StockspiecesComponent } from './mecanicien/stockspieces/components/stockspieces.component';
-import { FichesComponent } from './mecanicien/fiches/components/fiches.component';
+import { StockspiecesComponent } from './core/compnents/mecanicien/stockspieces/components/stockspieces.component';
+import { FichesComponent } from './core/compnents/mecanicien/fiches/components/fiches.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ClientcrudComponent } from './core/clientcrud/clientcrud.component';
+import { ServiceGenService } from './servicesCore/service-gen.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommercialComponent,
-    MecanicienComponent,
-    ClientsComponent,
+
     LoginsComponent,
-    StockspiecesComponent,
-    FichesComponent
-   
+
+    ClientcrudComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommercialRoutingModule,
-    MecanicienRoutingModule
+    HttpClientModule
+ 
   ],
-  providers: [],
+  providers: [ServiceGenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

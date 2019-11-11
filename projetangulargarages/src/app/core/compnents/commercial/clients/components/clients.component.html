@@ -1,0 +1,125 @@
+<div class="pack">
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      
+      <div class="col-sm-3"><h2 class="text-white" >Commercial </h2></div>
+      <div class="col-sm-6 offset-1"><h2 class="text-white" >Création des clients </h2></div>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        
+        
+      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <i class="materiel" [routerLink]="['/logins']">power_settings_new</i>
+     </form>
+    </nav>
+  
+  
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+  
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item ">
+                    <a class="nav-link" [routerLink]="['/commercial/voitures']">Liste voitures</a>
+                  </li>
+                  <li class="nav-item ">
+                      <a class="nav-link" [routerLink]="['/commercial/devis']">Creation devis</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" [routerLink]="['/commercial/listedevis']">Liste devis</a>
+                      </li>
+                    
+                    <li class="nav-item ">
+                        <a class="nav-link" [routerLink]="['/commercial/listeclient']">Liste client</a>
+                      </li>
+            
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/commercial/suiviscommandes']">Suivis Commandes</a>
+                    </li>
+                    
+                  
+                </ul>
+            
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+        
+      </div>
+  
+  
+    </div>
+
+    <br><br>
+
+<form>
+        <div class="form-group row">
+          <label for="staticNom" class="col-sm-2 col-form-label">Nom</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control-plaintext" id="staticNom" value="" required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group row">
+        <label for="staticPrenom" class="col-sm-2 col-form-label">Prenom</label>
+        <div class="col-sm-5">
+            <input type="text" class="form-control-plaintext" id="staticPrenom" value="" required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group row">
+                <label for="staticAdresse" class="col-sm-2 col-form-label">Adresse</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control-plaintext" id="staticAdresse" value="" required>
+                  </div>
+                </div>
+
+                <br>     
+
+              <div class="form-group row">
+                                <label for="staticVille" class="col-sm-2 col-form-label">Ville</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control-plaintext" id="staticVille" value="" required>
+                                  </div>
+                                </div>
+                                <br>
+                                <div class="form-group row">
+                                        <label for="staticCodePostal" class="col-sm-2 col-form-label">Code Postal</label>
+                                        <div class="col-sm-5">
+                                            <input type="text" class="form-control-plaintext" id="staticCodePostal" value="" required>
+                                          </div>
+                                        </div>
+
+                                        <br>
+                                        <div class="form-group row">
+                                                <label for="staticTelephone" class="col-sm-2 col-form-label">Telephone</label>
+                                                  <div class="col-sm-5">
+                                                    <input type="text" class="form-control-plaintext" id="staticTelephone" value="" required>
+                                                  </div>
+                                                </div>
+
+                                                <br>
+                                                <div class="form-group row">
+                                                       <label for="staticSexe" class="col-sm-2 col-form-label">Sexe</label>
+                                                          <div class="col-sm-5">
+                                                            <input type="text" class="form-control-plaintext" id="staticSexe" value="" required>
+                                                          </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="form-group row">
+                                                                <label for="staticValidation" class="col-sm-2 col-form-label"></label>
+                                                                <div class="col-sm-5">
+                                                                        <button type="submit">Créer le nouveau client</button>
+                                                                  </div>
+                                                                </div>
+        
+                                                        
+        
+      </form>

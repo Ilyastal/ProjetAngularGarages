@@ -1,0 +1,110 @@
+<div class="pack">
+
+       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+           
+           <div class="col-sm-3"><h2 class="text-white" >Commercial </h2></div>
+           <div class="col-sm-6 offset-1"><h2 class="text-white" >Suivi des commandes </h2></div>
+           
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarText">
+             
+             
+           </div>
+           <form class="form-inline my-2 my-lg-0">
+             <i class="materiel" [routerLink]="['/logins']">power_settings_new</i>
+          </form>
+         </nav>
+       
+       
+         <div class="pos-f-t">
+             <div class="collapse" id="navbarToggleExternalContent">
+               <div class="bg-dark p-4">
+       
+                   <ul class="navbar-nav mr-auto">
+                       <li class="nav-item ">
+                         <a class="nav-link" [routerLink]="['/commercial/voitures']">Liste voitures</a>
+                       </li>
+                       <li class="nav-item ">
+                           <a class="nav-link" [routerLink]="['/commercial/devis']">Creation devis</a>
+                         </li>
+                         <li class="nav-item ">
+                             <a class="nav-link" [routerLink]="['/commercial/listedevis']">Liste devis</a>
+                           </li>
+                         <li class="nav-item ">
+                           <a class="nav-link" [routerLink]="['/commercial/clients']">Creation client</a>
+                         </li>
+                         <li class="nav-item ">
+                             <a class="nav-link" [routerLink]="['/commercial/listeclient']">Liste client</a>
+                           </li>
+                     </ul>
+               </div>
+             </div>
+             <nav class="navbar navbar-dark bg-dark">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+             </nav>
+             
+           </div>
+       
+       
+         </div>
+     
+         <br><br>
+
+     <div class="row">
+           <div class="col-sm-2"><h2>Client</h2></div>
+           <div class="col-sm-2"><h2>Voiture</h2></div>
+           <div class="col-sm-6 offset-1"><h2>Suivi de la commande</h2></div>
+          
+          
+    </div><hr>
+    <div class="row">
+           <div class="col-sm-2"><h3>JMClient</h3></div>
+           <div class="col-sm-2"><h3>Porshe</h3></div>
+           <div class="col-sm-6 offset-1"><h3>Commandé le"01/11/2019"</h3></div>    
+    </div>
+      
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Client</th>
+            <th scope="col">Voiture</th>
+            <th scope="col">Suivi de la commande</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let commdeVoiture of listeCommandeVoiture | async">
+            <th scope="row">{{commndeVoiture.dateCommande}}</th>
+            <td>{{commdeVoiture.dateCommande}}</td>
+            <td>Commandé le " {{commdeVoiture.dateCommande}} "</td>
+            
+            <!-- <td>
+              
+              <span *ngIf="piece.pieceDefectueuse > 0; else elseBlock" class="badge badge-warning">
+                  {{piece.pieceDefectueuse}} piece defectueuse      
+              </span>
+              
+              <ng-template #elseBlock>
+                  Aucune Piece defectueuse
+                </ng-template>      
+            </td>
+            <td><button type="button" class="btn btn-info btn-sm" (click)="doModifier(piece, true)"><i class="materiel">
+                add
+                  </i>
+                </button>
+                <button type="button" class="btn btn-danger btn-sm" (click)="doModifier(piece, false)"><i class="materiel">
+                    remove
+                      </i></button>
+              </td> -->
+            
+          
+          </tr>
+          
+        </tbody>
+      
+      </table>
+      
