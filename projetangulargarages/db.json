@@ -19,30 +19,36 @@
   "client": [
     {
       "id": 1,
-      "nom": "Germain",
-      "prenom": "Christophe"
+      "nom": "Katz",
+      "prenom": "Axelle",
+      "adresse": "15 rue victor Hugo",
+      "ville": "Vénissieux",
+      "codepostal": "69200",
+      "telephone": "0652329812",
+      "sexe": "MADAME"
     },
     {
       "id": 2,
-      "nom": "Martin",
-      "prenom": "Jeanne"
+      "nom": "Mehidi",
+      "prenom": "Reda",
+      "adresse": "3 avenue du Général De Gaulle",
+      "ville": "Touarou",
+      "codepostal": "75400",
+      "telephone": "0798356241",
+      "sexe": "MONSIEUR"
     },
     {
       "id": 3,
-      "nom": "nom",
-      "prenom": "prenom"
-    },
-    {
-      "id": 4,
-      "nom": "nom",
-      "prenom": "prenom"
-    },
-    {
-      "id": 5,
-      "nom": "nom",
-      "prenom": "prenom"
+      "nom": "POMA",
+      "prenom": "Lionel",
+      "adresse": "13 rue Albert 1er",
+      "ville": "Ville-Des-Vieux",
+      "codepostal": "56000",
+      "telephone": "0698784565",
+      "sexe": "MONSIEUR"
     }
   ],
+  
   "voiture": [
     {
       "marque": "Audi",

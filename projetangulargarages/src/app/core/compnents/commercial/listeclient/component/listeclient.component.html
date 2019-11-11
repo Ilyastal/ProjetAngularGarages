@@ -59,31 +59,67 @@
     </div>
 
     <br><br>
-   
     
-<div class="form-group">
+    
   
-      <label for="exampleFormControlSelect1">Choisissez un client:</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+  
+
+    <form id="form-liste"  *ngFor="let cl of listcli |async" >
+        <div class="form-row">
+            <div class="form-col">
+             <label for="listeclientSexe">Sexe:</label>
+             <input type="text" class="form-control" id="listeclientSexe" value="{{cl.sexe}}" disabled >
+           </div>
+     
          
-         
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+     </div>
+      <div class="form-row">
+             <div class="form-col">
+             <label for="listeclientNom">Nom:</label>
+     
+             <input type="text" class="form-control" id="listeclientNom" value="{{cl.nom}}" disabled >
+      </div>
+      
 
-      <label for="DescriptionClient">Informations du client:</label>
-      <textarea name="" id="DescriptionClient" cols="12" rows="10">
-                    
-                    
-                    </textarea>  
+      <div class="form-col">
+        <label for="listeclientPrenom">Prenom:</label>
+        <input type="text" class="form-control" id="listeclientPrenom" value="{{cl.prenom}}" disabled >
+      </div>
+
+      <div class="form-col">
+      <label for="listeclientAdresse">Adresse:</label>
+      <input type="text" class="form-control" id="listeclientAdresse" value="{{cl.adresse}}" disabled >
+       
+      </div>
+</div>
+<br>
+<div class="form-row">
+              <div class="form-col">
+              <label for="listeclientVille">Ville:</label>
+              <input type="text" class="form-control" id="listeclientVille" value="{{cl.ville}}" disabled >
+       </div>
+
+       <div class="form-col">
+         <label for="listeclientCodePostal">Code Postal:</label>
+         <input type="text" class="form-control" id="listeclientCodePostal" value="{{cl.codepostal}}" disabled >
+       </div>
+
+       <div class="form-col">
+         <label for="voitureCouleur">Telephone:</label>
+         <input type="text" class="form-control" id="voitureCouleur" value="{{cl.telephone}}" disabled >
+       </div>
+      </div>
+      <br>
+     
 
 
-                    
-                 
+<br>   <hr>           
+            
+      </form>
+    
+    
 
-    </div>
+
+   
     
     

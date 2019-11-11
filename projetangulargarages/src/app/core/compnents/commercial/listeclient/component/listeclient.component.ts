@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Client } from '../../../../interfaces/client';
+import { Observable } from 'rxjs';
+import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
+
+const url = 'http://localhost:3000/client';
 
 @Component({
   selector: 'app-listeclient',
@@ -7,9 +12,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeclientComponent implements OnInit {
 
-  constructor() { }
+  listcli : Observable<Client[]>;
 
-  ngOnInit() {
+
+  constructor(private servicegen : ServiceGenService<Client>) { }
+  refresh(){
+    this.listcli = this.servicegen.getall(url)
   }
-
+  ngOnInit() {
+    this.refresh();
+  }
 }

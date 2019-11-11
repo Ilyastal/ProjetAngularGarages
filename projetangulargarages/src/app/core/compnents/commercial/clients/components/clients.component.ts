@@ -27,7 +27,12 @@ export class ClientsComponent implements OnInit {
     
     id : 0,
     nom: "nom",
-    prenom:  "prenom"
+    prenom:  "prenom",
+    adresse:"",
+    ville:"",
+    codepostal:"",
+    telephone:"",
+    sexe:""
   };
     this.servicegen.post(url, cl).subscribe(
       () => this.refresh()
@@ -43,8 +48,13 @@ export class ClientsComponent implements OnInit {
   doModifier(){
     let cl  : Client = {
     id : 4,
-    nom: "NCreation 444",
-    prenom:  "PCreation 444"
+    nom: "nom",
+    prenom:  "prenom",
+    adresse:"",
+    ville:"",
+    codepostal:"",
+    telephone:"",
+    sexe:""
   };
     this.servicegen.put(url, cl.id, cl).subscribe(
       () => this.refresh()
