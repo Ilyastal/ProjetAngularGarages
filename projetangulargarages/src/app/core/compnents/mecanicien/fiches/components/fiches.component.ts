@@ -3,7 +3,7 @@ import { Tache } from 'src/app/core/interfaces/tache';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
 import { Observable } from 'rxjs';
 
-const url = 'http://localhost:8080/Rest/fiches/';
+const url = 'http://localhost:8080/Rest/taches/';
 
 @Component({
   selector: 'app-fiches',
