@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Piece } from 'src/app/core/interfaces/piece';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
+
 const url = 'http://localhost:8080/Rest/pieces/';
 
 @Component({
