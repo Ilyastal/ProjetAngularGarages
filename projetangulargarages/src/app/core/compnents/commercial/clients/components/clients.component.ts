@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Client } from '../../../../interfaces/client';
 import { Observable } from 'rxjs';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
-const url = 'http://localhost:8080/Rest/clients/';
+
 
 @Component({
   selector: 'app-clients',
@@ -11,54 +13,21 @@ const url = 'http://localhost:8080/Rest/clients/';
   styleUrls: ['./clients.component.css']
 })
 export class ClientsComponent implements OnInit {
-  listclients : Observable<Client[]>;
-  client: Client;
+  
+  
 
-  constructor(private servicegen : ServiceGenService<Client>) { }
+  constructor() { }
   refresh(){
-    this.listclients = this.servicegen.getall(url)
+    
   }
   ngOnInit() {
-    // this.client= new Client();
-      this.refresh();
+  
+     
     
   }
+  onSubmit(){
 
-  doCreer(client : Client){
-    let cl  : Client = {
-      id : 0,
-      nom: "nom",
-      prenom: "prenom",
-      adresse: "blabla",
-      codePostal: "69200",
-      ville: "Lyon",
-      telephone: "0605040302",
-      sexe: null,
-  };
-    this.servicegen.post(url, client).subscribe(
-      () => this.refresh()
-    );
   }
-
-  doDelete(){
-    
-    this.servicegen.delete(url, 3).subscribe(
-      () => this.refresh()
-    );
-  }
-  doModifier(){
-    let cl  : Client = {
-    id : 4,
-    nom: "nom",
-    prenom:  "prenom",
-    adresse:"",
-    ville:"",
-    codePostal: " ",
-    telephone:"",
-    sexe: null
-  };
-    this.servicegen.put(url, cl.id, cl).subscribe(
-      () => this.refresh()
-    );
-  }
+  
+  
 }

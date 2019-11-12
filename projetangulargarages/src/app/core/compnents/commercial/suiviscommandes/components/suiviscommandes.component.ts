@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { CommandeVoiture } from 'src/app/core/interfaces/commandeVoiture';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
 
-const url = 'http://localhost:8080/Rest/commandeVoitures/';
+const url = 'http://localhost:8080/Rest/commande_voitures/';
 
 @Component({
   selector: 'app-suiviscommandes',
@@ -12,11 +12,11 @@ const url = 'http://localhost:8080/Rest/commandeVoitures/';
 })
 export class SuiviscommandesComponent implements OnInit {
 
-  listeCommandeVoiture: Observable<CommandeVoiture[]>;
+  listCommandeVoiture: Observable<CommandeVoiture[]>;
 
   constructor(private serviceCommandeVoiture: ServiceGenService<CommandeVoiture>) { }
   refresh(){
-    this.listeCommandeVoiture = this.serviceCommandeVoiture.getall(url)
+    this.listCommandeVoiture = this.serviceCommandeVoiture.getall(url)
   }
   
   ngOnInit() {
@@ -26,7 +26,7 @@ export class SuiviscommandesComponent implements OnInit {
   doCreer(){
       let commandeVoiture  : CommandeVoiture = {
       id: 0,
-      dateCommande: "",
+      dateCommande: new Date(),
       dateReception: new Date(),
       quantite: 0,
       dateCloture: new Date(),

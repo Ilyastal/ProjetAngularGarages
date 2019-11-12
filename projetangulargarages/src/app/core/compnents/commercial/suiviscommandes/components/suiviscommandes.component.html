@@ -54,18 +54,6 @@
      
          <br><br>
 
-     <div class="row">
-           <div class="col-sm-2"><h2>Client</h2></div>
-           <div class="col-sm-2"><h2>Voiture</h2></div>
-           <div class="col-sm-6 offset-1"><h2>Suivi de la commande</h2></div>
-          
-          
-    </div><hr>
-    <div class="row">
-           <div class="col-sm-2"><h3>JMClient</h3></div>
-           <div class="col-sm-2"><h3>Porshe</h3></div>
-           <div class="col-sm-6 offset-1"><h3>Commandé le"01/11/2019"</h3></div>    
-    </div>
       
     <table class="table">
         <thead class="thead-dark">
@@ -77,10 +65,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let commdeVoiture of listeCommandeVoiture | async">
-            <th scope="row">{{commndeVoiture.dateCommande}}</th>
-            <td>{{commdeVoiture.dateCommande}}</td>
-            <td>Commandé le " {{commdeVoiture.dateCommande}} "</td>
+          <tr *ngFor="let commande of listCommandeVoiture | async; let i = index">
+            <th scope="row">{{commande.devis.client.nom}} {{commande.devis.client.prenom}}</th>
+            <td>{{commande.voiture.marque}} / {{commande.voiture.modele}}</td>
+            <td>Commandé le " {{commande.dateCommande | date: 'dd/MM/yyyy'}} "</td> 
             
             <!-- <td>
               
