@@ -12,7 +12,7 @@ const url = 'http://localhost:8080/Rest/clients/';
 })
 export class ClientsComponent implements OnInit {
   listclients : Observable<Client[]>;
-client: Client;
+  client: Client;
 
   constructor(private servicegen : ServiceGenService<Client>) { }
   refresh(){

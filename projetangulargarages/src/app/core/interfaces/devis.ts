@@ -9,11 +9,11 @@ export interface Devis{
     description: string;
     validationDevis: boolean;
     utilisateur: Utilisateur;
-    prixHT: number;
+    prixHt: number;
     tva: number;
     quantite: number;
     client: Client;
-    voiture: Voiture;
+    voiture: Voiture | any;
     refusDevis: boolean;
     annulationDevis: boolean
     

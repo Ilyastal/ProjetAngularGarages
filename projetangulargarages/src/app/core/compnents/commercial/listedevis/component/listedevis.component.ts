@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Devis } from 'src/app/core/interfaces/devis';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
 
-const url = 'http://localhost:8080/Rest/pieces/';
+const url = 'http://localhost:8080/Rest/devis/';
 
 @Component({
   selector: 'app-listedevis',
@@ -21,7 +21,9 @@ export class ListedevisComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     this.refresh();
+    
   }
 
   doCreer(){
@@ -31,7 +33,7 @@ export class ListedevisComponent implements OnInit {
       description: "C'est la description",
       validationDevis: true,
       utilisateur: null,
-      prixHT: 12,
+      prixHt: 12,
       tva: 1.20,
       quantite: 1,
       client: null,

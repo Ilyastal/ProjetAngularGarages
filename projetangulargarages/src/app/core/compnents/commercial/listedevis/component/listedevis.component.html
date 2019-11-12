@@ -60,7 +60,7 @@
 
     <br><br>
 
-<div class="form-group">
+<!-- <div class="form-group">
       <label for="exampleFormControlSelect1">Choisissez un devis:</label>
       <select class="form-control" id="exampleFormControlSelect1">
         <option>1</option>
@@ -75,4 +75,31 @@
                     
                     
                     </textarea>  
-    </div>
+    </div> -->
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Date Creation</th>
+          <th scope="col">Client</th>
+          <th scope="col">Description</th>
+          <th scope="col">Validation</th>
+          <th scope="col">Refus</th>
+          <th scope="col">Annulation</th>
+         
+    
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let devis of listDevis | async ; let i = index ">
+          <td>{{devis.dateDevis | date: 'dd/MM/yyyy'}}</td>
+          <td >{{devis.client.nom}}</td>
+          <td>{{devis.description}}</td>
+          <td>{{devis.validationDevis}}</td>
+          <td>{{devis.refusDevis}}</td>
+          <td>{{devis.annulationDevis}}</td>
+          
+        </tr>
+        
+      </tbody>
+    
+    </table>
