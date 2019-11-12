@@ -7,6 +7,7 @@ import { Voiture } from 'src/app/core/interfaces/voiture';
 import { FormGroup, FormControl, Validators, FormBuilder, NgForm } from '@angular/forms';
 import { Utilisateur } from 'src/app/core/interfaces/utilisateur';
 import { error } from 'util';
+import { Router } from '@angular/router';
 
 const url = 'http://localhost:8080/Rest/';
 
@@ -36,6 +37,7 @@ export class DevisComponent implements OnInit {
   constructor(private serviceDevis: ServiceGenService<Devis>,
               private serviceClient: ServiceGenService<Client>,
               private serviceVoiture: ServiceGenService<Voiture>,
+              private router: Router,
               private formBuilder: FormBuilder) { }
   
   refresh(){
@@ -88,8 +90,8 @@ export class DevisComponent implements OnInit {
       () => this.refresh()
       
     );
+    this.router.navigate(['/commercial/listedevis']);
     
-    console.log(JSON.stringify(newDevis));
   }
   initForm(){
     this.devisForm = this.formBuilder.group({
