@@ -20,41 +20,31 @@ export class ClientcrudComponent implements OnInit {
     this.refresh();
   }
 
-  doCreer(){
-    let cl  : Client = {
-    id : 0,
-    nom: "nom",
-    prenom:  "prenom",
-    adresse:"",
-    ville:"",
-    codepostal:"",
-    telephone:"",
-    sexe:""
-  };
-    this.servicegen.post(url, cl).subscribe(
-      () => this.refresh()
-    );
-  }
+   doCreer(){
+  //   let cl  : Client = {
+  //   id : 0,
+  //   nom: "NCreation",
+  //   prenom:  "PCreation"
+  // };
+  //   this.servicegen.post(url, cl).subscribe(
+  //     () => this.refresh()
+  //   );
+   }
 
-  doDelete(){
+   doDelete(){
     
-    this.servicegen.delete(url, 3).subscribe(
-      () => this.refresh()
-    );
-  }
-  doModifier(){
-    let cl  : Client = {
-    id : 4,
-    nom: "nom",
-    prenom:  "prenom",
-    adresse:"",
-    ville:"",
-    codepostal:"",
-    telephone:"",
-    sexe:""
-  };
-    this.servicegen.put(url, cl.id, cl).subscribe(
-      () => this.refresh()
-    );
-  }
+  //   this.servicegen.delete(url, 3).subscribe(
+  //     () => this.refresh()
+  //   );
+   }
+   doModifier(){
+  //   let cl  : Client = {
+  //   id : 4,
+  //   nom: "NCreation 444",
+  //   prenom:  "PCreation 444"
+  // };
+  //   this.servicegen.put(url, cl.id, cl).subscribe(
+  //     () => this.refresh()
+  //   );
+   }
 }

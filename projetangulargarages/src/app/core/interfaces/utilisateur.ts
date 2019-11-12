@@ -4,8 +4,10 @@ export interface Utilisateur{
     id : number;
     nom: string;
     prenom: string;
-    user: number;
+    user: string;
     password: string;
-    fonction: Role;
+    desactiveUser: boolean;
+    desactiveAngular: boolean;
+    roles: Role[];
     
 }

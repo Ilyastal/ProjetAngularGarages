@@ -1,5 +1,7 @@
+import { Fonction } from '../enums/fonction.enum';
+
 export interface Role{
     id : number;
-    fonction: any;
+    fonction: Fonction | string;
     
 }

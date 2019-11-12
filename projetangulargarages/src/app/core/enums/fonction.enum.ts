@@ -1,0 +1,7 @@
+export enum Fonction{
+    ADMINISTRATEUR,
+    CHEFATELIER,
+    COMMERCIAL,
+    MECANICIEN,
+    MAGASINIER
+}

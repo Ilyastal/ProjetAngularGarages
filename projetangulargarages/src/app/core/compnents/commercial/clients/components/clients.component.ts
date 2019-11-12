@@ -12,7 +12,7 @@ const url = 'http://localhost:8080/Rest/clients/';
 })
 export class ClientsComponent implements OnInit {
   listclients : Observable<Client[]>;
-client: Client;
+  client: Client;
 
   constructor(private servicegen : ServiceGenService<Client>) { }
   refresh(){
@@ -26,15 +26,14 @@ client: Client;
 
   doCreer(client : Client){
     let cl  : Client = {
-    
-   id : 0,
-     nom: "nom",
-     prenom:  "prenom",
-     adresse:"",
-     ville:"",
-     codepostal:"",
-     telephone:"",
-     sexe:""
+      id : 0,
+      nom: "nom",
+      prenom: "prenom",
+      adresse: "blabla",
+      codePostal: "69200",
+      ville: "Lyon",
+      telephone: "0605040302",
+      sexe: null,
   };
     this.servicegen.post(url, client).subscribe(
       () => this.refresh()
@@ -54,9 +53,9 @@ client: Client;
     prenom:  "prenom",
     adresse:"",
     ville:"",
-    codepostal:"",
+    codePostal: " ",
     telephone:"",
-    sexe:""
+    sexe: null
   };
     this.servicegen.put(url, cl.id, cl).subscribe(
       () => this.refresh()

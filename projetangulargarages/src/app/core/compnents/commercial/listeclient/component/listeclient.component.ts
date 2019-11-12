@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Client } from '../../../../interfaces/client';
+import { Client } from 'src/app/core/interfaces/client';
 import { Observable } from 'rxjs';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
 
@@ -12,14 +12,44 @@ const url = 'http://localhost:8080/Rest/clients/';
 })
 export class ListeclientComponent implements OnInit {
 
-  listecli : Observable<Client[]>;
+  listClients : Observable<Client[]>;
 
+  constructor(private serviceClient : ServiceGenService<Client> ) { }
 
-  constructor(private servicegen : ServiceGenService<Client>) { }
   refresh(){
-    this.listecli = this.servicegen.getall(url)
+    this.listClients = this.serviceClient.getall(url)
   }
+
+  
   ngOnInit() {
     this.refresh();
+  }
+
+  doCreer(){
+    let client : Client = {
+      id : 0,
+      nom: "George",
+      prenom: "Paul",
+      adresse: "32, rue Gambetta",
+      codePostal: "69700",
+      ville: "Echalas",
+      telephone: "0678497812",
+      sexe: null
+    };
+      this.serviceClient.post(url, client).subscribe(
+        () => this.refresh()
+      );
+  }
+
+    // doDelete(){
+    
+  //   this.serviceClient.delete(url, 3).subscribe(
+  //     () => this.refresh()
+  //   );
+  // }
+  doModifier(client: Client){
+    this.serviceClient.put(url, client.id, client).subscribe(
+      () => this.refresh()
+    );
   }
 }

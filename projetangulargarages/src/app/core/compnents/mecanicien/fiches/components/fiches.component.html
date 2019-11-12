@@ -44,9 +44,25 @@
     
         <br>
     
-    
-       
-        <form>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Description</th>
+              <!-- <th scope="col">Pieces utilisé</th> -->
+              <th scope="col">Niveau Priorié</th>
+              <th scope="col">Tâche terminé</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tache of listTaches | async">
+              <th scope="row">{{tache.description}}</th>
+              <!-- <td>{{tache.piece.nom}}</td> -->
+              <td>{{tache.niveauPriorite}}</td>
+              <td>{{tache.etatTache}}</td>
+            </tr>            
+          </tbody>
+        </table>
+        <!-- <form>
                     <div class="form-group">
                            <div class="col-sm-3"><h4 input type="text"class="imp">Importance</h4></div>
                            
@@ -103,5 +119,5 @@
                                    
                                                             
                                           </form>
-                                          <hr>
+                                          <hr> -->
     
