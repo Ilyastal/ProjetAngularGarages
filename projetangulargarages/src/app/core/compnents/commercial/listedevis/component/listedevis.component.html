@@ -84,6 +84,7 @@
           <th scope="col">Description</th>
           <th scope="col">Validation</th>
           <th scope="col">Refus</th>
+          <th scope="col">Modification</th>
           <th scope="col">Annulation</th>
          
     
@@ -96,7 +97,9 @@
           <td>{{devis.description}}</td>
           <td>{{devis.validationDevis}}</td>
           <td>{{devis.refusDevis}}</td>
+          <td><a class="btn btn-primary" [routerLink]="['/commercial/devis',devis.id]">Modifier</a></td>
           <td>{{devis.annulationDevis}}</td>
+          
           
         </tr>
         

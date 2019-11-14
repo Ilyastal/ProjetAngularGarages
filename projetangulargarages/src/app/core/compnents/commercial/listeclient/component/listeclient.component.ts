@@ -48,7 +48,7 @@ export class ListeclientComponent implements OnInit {
   //     () => this.refresh()
   //   );
   // }
-  doModifier(client: Client){
+  doMod(client: Client){
     console.log("Root")
     this.route.navigate(["/commercial/clients",client.id]);
   }
