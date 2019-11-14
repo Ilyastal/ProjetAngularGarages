@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Client } from 'src/app/core/interfaces/client';
 import { Observable } from 'rxjs';
 import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
+import { Router } from '@angular/router';
 
 const url = 'http://localhost:8080/Rest/clients/';
 
@@ -14,7 +15,7 @@ export class ListeclientComponent implements OnInit {
 
   listClients : Observable<Client[]>;
 
-  constructor(private serviceClient : ServiceGenService<Client> ) { }
+  constructor(private serviceClient : ServiceGenService<Client>, private route:Router) { }
 
   refresh(){
     this.listClients = this.serviceClient.getall(url)
@@ -24,7 +25,7 @@ export class ListeclientComponent implements OnInit {
   ngOnInit() {
     this.refresh();
   }
-
+ /**
   doCreer(){
     let client : Client = {
       id : 0,
@@ -39,7 +40,7 @@ export class ListeclientComponent implements OnInit {
       this.serviceClient.post(url, client).subscribe(
         () => this.refresh()
       );
-  }
+  }**/
 
     // doDelete(){
     
@@ -48,9 +49,8 @@ export class ListeclientComponent implements OnInit {
   //   );
   // }
   doModifier(client: Client){
-    this.serviceClient.put(url, client.id, client).subscribe(
-      () => this.refresh()
-    );
+    console.log("Root")
+    this.route.navigate(["/commercial/clients",client.id]);
   }
 
   logout(){

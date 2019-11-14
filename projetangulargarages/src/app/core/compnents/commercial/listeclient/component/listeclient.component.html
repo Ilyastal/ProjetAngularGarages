@@ -70,6 +70,7 @@
           <th scope="col">Adresse</th>
           <th scope="col"> Code Postal </th>
           <th scope="col">Telephone</th>
+          <th scope="col">Modification</th>
          
     
         </tr>
@@ -82,6 +83,7 @@
           <td>{{client.adresse}}</td>
           <td>{{client.codePostal}}</td>
           <td>{{client.telephone}}</td>
+          <td><a class="btn btn-primary" [routerLink]="['/commercial/clients',client.id]" >Modifier</a></td>
           
         </tr>
         

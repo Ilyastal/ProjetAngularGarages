@@ -13,6 +13,7 @@ import { ListeclientComponent } from './listeclient/component/listeclient.compon
 const routes: Routes = [
   {path: '', component: CommercialComponent, children: [
     {path: 'clients', component: ClientsComponent},
+    {path: 'clients/:id', component: ClientsComponent},
     {path: 'devis', component: DevisComponent},
     {path: 'suiviscommandes', component: SuiviscommandesComponent },
     {path: 'voitures', component: VoituresComponent },
