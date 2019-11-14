@@ -26,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommercialRoutingModule,
     FormsModule,
     ReactiveFormsModule
+    
   ], 
   exports: [
     CommercialComponent,

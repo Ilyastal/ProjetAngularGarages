@@ -41,7 +41,7 @@ export class ClientsComponent implements OnInit {
   }
   
 
-  onSubmit(f: NgForm){
+  onSubmit(){
     console.log(this.clientForm.value)
     let newClient : Client = {
       id : 0,
@@ -74,6 +74,9 @@ export class ClientsComponent implements OnInit {
     })
   }
 
+  logout(){
+    this.serviceClient.logout();
+  }
 
 
   

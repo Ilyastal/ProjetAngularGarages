@@ -18,7 +18,7 @@
 
     </div>
     <form class="form-inline my-2 my-lg-0">
-      <i class="materiel" [routerLink]="['/logins']">power_settings_new</i>
+      <i class="materiel" (click)="logout()">power_settings_new</i>
     </form>
   </nav>
 
@@ -67,7 +67,7 @@
 
 
 
-<form [formGroup]="clientForm" (ngSubmit)="onSubmit(f)">
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
   <div class="form-group row">
     <label for="staticNom" class="col-sm-2 col-form-label">Nom</label>
     <div class="col-sm-5">

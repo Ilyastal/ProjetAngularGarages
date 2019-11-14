@@ -52,4 +52,8 @@ export class ListeclientComponent implements OnInit {
       () => this.refresh()
     );
   }
+
+  logout(){
+    this.serviceClient.logout();
+  }
 }

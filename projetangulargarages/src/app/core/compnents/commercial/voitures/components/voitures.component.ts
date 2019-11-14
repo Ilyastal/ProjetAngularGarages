@@ -22,6 +22,9 @@ ngOnInit() {
   this.refresh();
 }
 
+logout(){
+  this.servicegen.logout();
+}
 
 }
 

@@ -58,4 +58,9 @@ export class StockspiecesComponent implements OnInit {
        () => this.refresh()
      );
    }
+
+   logout(){
+     console.log('mecanicien piece');
+    this.servicePiece.logout();
+  }
 }

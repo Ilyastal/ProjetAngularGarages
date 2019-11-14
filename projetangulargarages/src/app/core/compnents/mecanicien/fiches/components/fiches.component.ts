@@ -53,4 +53,9 @@ export class FichesComponent implements OnInit {
        () => this.refresh()
      );
    }
+   
+   logout(){
+     console.log('mecanicien fiche');
+    this.serviceTache.logout();
+  }
 }

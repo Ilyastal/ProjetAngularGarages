@@ -60,4 +60,8 @@ export class ListedevisComponent implements OnInit {
       () => this.refresh()
     );
   }
+
+  logout(){
+    this.serviceDevis.logout();
+  }
 }

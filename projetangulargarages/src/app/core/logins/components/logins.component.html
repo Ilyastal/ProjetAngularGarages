@@ -1,19 +1,27 @@
-<body id="body_acceuil">
-    
-  <div id="one">
-<div id="two"> <h2>Connexion à l'appli JM Garage</h2></div><br><br><br><br>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
+    <div id="body_acceuil">
+  
+        <div id="one">
+          <div id="two"> <h2>Connexion à l'appli JM Garage</h2></div><br><br><br><br>
 
-<input type="text" class="A" name="" disabled value="Login utilisateur :"><br><br><br>
-<input type="text" class="B" placeholder="Enter Your Login :"><br><br><br>
+          
+          <input type="text" class="A" name="" disabled value="Login utilisateur :"><br><br><br>
+          <input type="text" class="B"  formControlName="userValidateur" placeholder="Enter Your Login :" ><br><br><br>
 
-<input type="text" class="A" disabled value="Mot de passe utilisateur :"><br><br><br>
+          <input type="text" class="A" disabled value="Mot de passe utilisateur :"><br><br><br>
 
-    <input type="text" class="B"  placeholder="Enter Your Password :"><br><br><br>
+          <input type="password" class="B"   formControlName="passwordValidateur" placeholder="Enter Your Password :" ><br><br><br>
+          
+          <div class="alert alert-warning" role="alert" *ngIf="errorMessage">
+            {{errorMessage}}
+          </div>
+          
+          <input type="submit" class="login"  value="Connexion" [disabled]="loginForm.invalid">
+            
 
-<input type="submit" class="login"  value="Connexion" disabled>
-    
-</div>
- 
-</body>
+          </div>
+        
+    </div>
+</form>
 

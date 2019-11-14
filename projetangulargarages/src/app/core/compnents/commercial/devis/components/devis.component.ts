@@ -114,4 +114,8 @@ export class DevisComponent implements OnInit {
     return this.utilisateur;
   }
 
+  logout(){
+    this.serviceDevis.logout();
+  }
+
 }

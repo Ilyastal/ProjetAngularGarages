@@ -52,4 +52,7 @@ export class SuiviscommandesComponent implements OnInit {
        () => this.refresh()
      );
    }
+   logout(){
+    this.serviceCommandeVoiture.logout();
+  }
 }
