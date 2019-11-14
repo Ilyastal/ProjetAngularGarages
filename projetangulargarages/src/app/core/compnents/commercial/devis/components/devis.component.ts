@@ -40,6 +40,7 @@ export class DevisComponent implements OnInit {
               private formBuilder: FormBuilder) { }
   
   refresh(){
+    console.log(this.devisForm)
       this.listClients = this.serviceClient.getall(url + 'clients/');
       this.listVoitures = this.serviceVoiture.getall(url + 'voitures/')
     }
