@@ -84,8 +84,8 @@
           <th scope="col">Description</th>
           <th scope="col">Validation</th>
           <th scope="col">Refus</th>
-          <th scope="col">Modification</th>
           <th scope="col">Annulation</th>
+          <th scope="col">Modification</th>
          
     
         </tr>
@@ -104,7 +104,7 @@
           <td>
            <button class="btn" [ngClass]="devis.annulationDevis ? 'btn-success' : 'btn-danger'" (click)="doModifier(devis, 'annulation')"> <i class="materiel">{{devis.annulationDevis ? 'done' : 'close'}}</i> </button>
           </td>
-          
+          <td><a class="btn btn-primary" [routerLink]="['/commercial/devis',devis.id]">Modifier</a></td>
           
         </tr>
         

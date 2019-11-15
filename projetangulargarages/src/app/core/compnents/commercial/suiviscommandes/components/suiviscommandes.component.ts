@@ -11,7 +11,7 @@ const url = 'http://localhost:8080/Rest/commande_voitures/';
   styleUrls: ['./suiviscommandes.component.css']
 })
 export class SuiviscommandesComponent implements OnInit {
-
+  errorMessage: '';
   listCommandeVoiture: Observable<CommandeVoiture[]>;
 
   constructor(private serviceCommandeVoiture: ServiceGenService<CommandeVoiture>) { }
@@ -21,6 +21,7 @@ export class SuiviscommandesComponent implements OnInit {
   
   ngOnInit() {
     this.refresh();
+    this.errorMessage = '';
   }
 
   doCreer(){
@@ -46,14 +47,14 @@ export class SuiviscommandesComponent implements OnInit {
   //   );
   // }
    doModifier(commandeVoiture: CommandeVoiture){
-  
-    commandeVoiture.dateCloture = new Date();  
+    if(commandeVoiture.dateReception !== null){
+      commandeVoiture.dateCloture = new Date();  
      this.serviceCommandeVoiture.put(url, commandeVoiture.id, commandeVoiture).subscribe(
        () => this.refresh()
      );
+    }
+    
    }
-
-   
 
    logout(){
     this.serviceCommandeVoiture.logout();
