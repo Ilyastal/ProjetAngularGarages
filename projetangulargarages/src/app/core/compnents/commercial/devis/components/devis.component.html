@@ -68,14 +68,14 @@
                   <option *ngFor="let client of listClients | async; let i= index" [ngValue]="i">{{client.nom}} {{client.prenom}}</option>
                  
                 </select>
-                <button class="btn btn-info"  [routerLink]="['/commercial/clients']">Ajouter client</button>
+                <button class="btn btn-info" style="margin-top: 5px;"  [routerLink]="['/commercial/clients']">Ajouter client</button>
               </div>
 
 
               <div class="form-group">
                     <label for="StaticVoiture">Choisissez une voiture:</label>
                     <select class="form-control" id="StaticVoiture" formControlName="voitureValidateur">
-                            <option *ngFor="let voiture of listVoitures | async; let i = index" [ngValue]="i">{{voiture.marque}} / {{voiture.modele}}</option>
+                            <option *ngFor="let voiture of listVoitures | async; let i = index" [ngValue]="i">{{voiture.marque}} / {{voiture.modele}} prix HT : {{voiture.prixUnitaire}}</option>
                             
                     </select>
                   </div>
@@ -84,6 +84,7 @@
                         <input type="text" class="form-control" id="staticQuantité"  formControlName="quantiteValidateur">
                         
                       </div>
+                     
                       <div class="form-group">
                             <label for="staticDescription">Description du produit:</label>
                            

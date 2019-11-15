@@ -39,7 +39,7 @@
                       </li>
             
                   <li class="nav-item">
-                      <a class="nav-link" [routerLink]="['commercial/suiviscommandes']">Suivis Commandes</a>
+                      <a class="nav-link" [routerLink]="['/commercial/suiviscommandes']">Suivis Commandes</a>
                     </li>
                     
                   
@@ -94,9 +94,15 @@
           <td>{{devis.dateDevis | date: 'dd/MM/yyyy'}}</td>
           <td >{{devis.client.nom}}</td>
           <td>{{devis.description}}</td>
-          <td>{{devis.validationDevis}}</td>
-          <td>{{devis.refusDevis}}</td>
-          <td>{{devis.annulationDevis}}</td>
+          <td>
+            <button class="btn" [ngClass]="devis.validationDevis ? 'btn-success' : 'btn-danger'" (click)="doModifier(devis, 'validation')"><i class="materiel">{{devis.validationDevis ? 'done' : 'close'}}</i> </button>
+          </td>
+          <td>
+            <button class="btn" [ngClass]="devis.refusDevis ? 'btn-success' : 'btn-danger'" (click)="doModifier(devis, 'refus')"> <i class="materiel">{{devis.refusDevis ? 'done' : 'close'}}</i> </button>
+          </td>
+          <td>
+           <button class="btn" [ngClass]="devis.annulationDevis ? 'btn-success' : 'btn-danger'" (click)="doModifier(devis, 'annulation')"> <i class="materiel">{{devis.annulationDevis ? 'done' : 'close'}}</i> </button>
+          </td>
           
         </tr>
         

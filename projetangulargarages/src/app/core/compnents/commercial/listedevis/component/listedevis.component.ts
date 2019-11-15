@@ -53,9 +53,21 @@ export class ListedevisComponent implements OnInit {
   //   );
   // }
 
-  doModifier(devis: Devis){
+  doModifier(devis: Devis, action: string){
 
+  switch (action) {
+    case 'validation':
+        devis.validationDevis = !devis.validationDevis;
+      break;
+    case 'refus':
+      devis.refusDevis = !devis.refusDevis;
+        break;
+    case 'annulation':
+      devis.annulationDevis = !devis.annulationDevis;
+      break;
   
+  }
+
   this.serviceDevis.put(url, devis.id, devis).subscribe(
       () => this.refresh()
     );
@@ -64,4 +76,5 @@ export class ListedevisComponent implements OnInit {
   logout(){
     this.serviceDevis.logout();
   }
+
 }

@@ -57,8 +57,23 @@
             <tr *ngFor="let tache of listTaches | async">
               <th scope="row">{{tache.description}}</th>
               <!-- <td>{{tache.piece.nom}}</td> -->
-              <td>{{tache.niveauPriorite}}</td>
-              <td>{{tache.etatTache}}</td>
+              <td>
+                
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                     
+                      <button type="button" class="btn" [ngClass]="getColorPro(tache.niveauPriorite)" >{{tache.niveauPriorite}}</button>
+                      
+                    </div>
+                
+                     
+                </td>
+              <td>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button" class="btn " [ngClass]="getColor(tache.etatTache)" (click)="doModifier(tache, 'etat', false)"><i class="materiel">chevron_left</i> </button>
+                      <button type="button" class="btn" [ngClass]="getColor(tache.etatTache)" >{{tache.etatTache}}</button>
+                      <button type="button" class="btn" [ngClass]="getColor(tache.etatTache)" (click)="doModifier(tache, 'etat', true)"><i class="materiel">chevron_right</i></button>
+                    </div>
+                </td>
             </tr>            
           </tbody>
         </table>

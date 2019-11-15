@@ -61,6 +61,8 @@
             <th scope="col">Client</th>
             <th scope="col">Voiture</th>
             <th scope="col">Suivi de la commande</th>
+            <th scope="col">Reçu le</th>
+            <th scope="col">Cloture</th>
             
           </tr>
         </thead>
@@ -69,6 +71,11 @@
             <th scope="row">{{commande.devis.client.nom}} {{commande.devis.client.prenom}}</th>
             <td>{{commande.voiture.marque}} / {{commande.voiture.modele}}</td>
             <td>Commandé le " {{commande.dateCommande | date: 'dd/MM/yyyy'}} "</td> 
+            <td>{{commande.dateReception}}</td>
+            <td *ngIf=" commande.dateCloture ; else elseBlock">{{commande.dateCloture}}</td>
+            <ng-template #elseBlock>
+              <td><button class="btn btn-primary" (click)="doModifier(commande)" >Cloture</button></td>
+            </ng-template>
             
             <!-- <td>
               

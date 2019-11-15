@@ -47,12 +47,16 @@ export class SuiviscommandesComponent implements OnInit {
   // }
    doModifier(commandeVoiture: CommandeVoiture){
   
-    
+    commandeVoiture.dateCloture = new Date();  
      this.serviceCommandeVoiture.put(url, commandeVoiture.id, commandeVoiture).subscribe(
        () => this.refresh()
      );
    }
+
+   
+
    logout(){
     this.serviceCommandeVoiture.logout();
   }
+
 }

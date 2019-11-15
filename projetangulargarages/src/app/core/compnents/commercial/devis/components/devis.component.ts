@@ -7,6 +7,7 @@ import { Voiture } from 'src/app/core/interfaces/voiture';
 import { FormGroup, FormControl, Validators, FormBuilder, NgForm } from '@angular/forms';
 import { Utilisateur } from 'src/app/core/interfaces/utilisateur';
 import { Router } from '@angular/router';
+import { ListedevisComponent } from '../../listedevis/component/listedevis.component';
 
 const url = 'http://localhost:8080/Rest/';
 
@@ -30,6 +31,7 @@ export class DevisComponent implements OnInit {
   clientValidateur= new FormControl('', Validators.required);
   voitureValidateur= new FormControl('', Validators.required);
   quantiteValidateur= new FormControl('', Validators.required);
+  
   descriptionValidateur= new FormControl('', Validators.required);
   
 
@@ -78,7 +80,7 @@ export class DevisComponent implements OnInit {
       description: this.devisForm.value.descriptionValidateur,
       validationDevis: false,
       utilisateur: this.getUtilisateur(),
-      prixHt: 1500.0,
+      prixHt: this.getVoiture().prixUnitaire,
       tva: 1.2,
       quantite: parseInt(this.devisForm.value.quantiteValidateur),
       client: this.getClient(),
@@ -87,8 +89,10 @@ export class DevisComponent implements OnInit {
       annulationDevis: false
     }
     this.serviceDevis.post(url +'devis/', newDevis).subscribe(
-      () => this.refresh()
-      
+      () => {
+        this.refresh();
+        
+      }
     );
     this.router.navigate(['/commercial/listedevis']);
     
