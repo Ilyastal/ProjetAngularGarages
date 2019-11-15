@@ -64,8 +64,9 @@
         <div class="form-group">
                 
           <label for="exampleFormControlSelect1">Choisissez un client: </label> 
-                <select class="form-control"  id="exampleFormControlSelect1" formControlName="clientValidateur">
-                  <option *ngFor="let client of listClients | async; let i= index" [ngValue]="i">{{client.nom}} {{client.prenom}}</option>
+                <select  class="form-control"  id="exampleFormControlSelect1" formControlName="clientValidateur">
+                  
+                  <option *ngFor="let client of listClients | async" [ngValue]="client.id" >{{client.nom}} {{client.prenom}}</option>
                  
                 </select>
                 <button class="btn btn-info" style="margin-top: 5px;"  [routerLink]="['/commercial/clients']">Ajouter client</button>
@@ -75,7 +76,7 @@
               <div class="form-group">
                     <label for="StaticVoiture">Choisissez une voiture:</label>
                     <select class="form-control" id="StaticVoiture" formControlName="voitureValidateur">
-                            <option *ngFor="let voiture of listVoitures | async; let i = index" [ngValue]="i">{{voiture.marque}} / {{voiture.modele}} prix HT : {{voiture.prixUnitaire}}</option>
+                            <option *ngFor="let voiture of listVoitures | async" [ngValue]="voiture.id">{{voiture.marque}} / {{voiture.modele}}</option>
                             
                     </select>
                   </div>
