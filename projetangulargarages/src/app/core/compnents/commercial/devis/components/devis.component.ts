@@ -6,8 +6,11 @@ import { ServiceGenService } from 'src/app/servicesCore/service-gen.service';
 import { Voiture } from 'src/app/core/interfaces/voiture';
 import { FormGroup, FormControl, Validators, FormBuilder, NgForm } from '@angular/forms';
 import { Utilisateur } from 'src/app/core/interfaces/utilisateur';
-import { Router } from '@angular/router';
+
 import { ListedevisComponent } from '../../listedevis/component/listedevis.component';
+import { error } from 'util';
+import { map} from 'rxjs/operators';
+import { Router, ActivatedRoute } from '@angular/router';
 
 const url = 'http://localhost:8080/Rest/';
 
@@ -39,10 +42,38 @@ export class DevisComponent implements OnInit {
               private serviceClient: ServiceGenService<Client>,
               private serviceVoiture: ServiceGenService<Voiture>,
               private router: Router,
-              private formBuilder: FormBuilder) { }
+              private route:ActivatedRoute,
+              private formBuilder: FormBuilder) {
+              this.devis=null;
+              this.route.params.subscribe((param: {id:number}) =>
+               
+              
+              
+              {
+                  this.serviceDevis.getall(url+'devis/').pipe(
+                    map((data)=>data.filter((item)=>item.id == param.id ))).
+                  subscribe((data)=> {
+                    this.devis = data[0];
+                    console.log(this.devis);
+                    if(this.devis == null) {
+                      this.initForm();
+                      return;
+                    }   
+                    this.clientValidateur= new FormControl(this.devis.client.nom, Validators.required);
+                    this.voitureValidateur= new FormControl(this.devis.voiture.nom, Validators.required);
+                    this.quantiteValidateur= new FormControl(this.devis.quantite, Validators.required);
+                    this.descriptionValidateur= new FormControl(this.devis.description, Validators.required);
+                    this.initForm();             
+
+              }
+              
+              )
+            }
+              );
+          }
   
   refresh(){
-    console.log(this.devisForm)
+   
       this.listClients = this.serviceClient.getall(url + 'clients/');
       this.listVoitures = this.serviceVoiture.getall(url + 'voitures/')
     }
@@ -73,7 +104,7 @@ export class DevisComponent implements OnInit {
 };
 }
   onSubmit(f: NgForm){
-    console.log(this.devisForm.value)
+    if(this.devis == null) {
     let newDevis : Devis = {
       id : 0,
       dateDevis : new Date(),
@@ -89,14 +120,39 @@ export class DevisComponent implements OnInit {
       annulationDevis: false
     }
     this.serviceDevis.post(url +'devis/', newDevis).subscribe(
-      () => {
-        this.refresh();
-        
-      }
+      () => this.router.navigate(['/commercial/listedevis'])
+      
     );
-    this.router.navigate(['/commercial/listedevis']);
+    
     
   }
+
+  else
+  {
+    this.doMod();
+  }
+}
+
+  doMod(){
+    let devis : Devis = {
+    id:this.devis.id,
+    dateDevis : new Date(),
+    description: this.devisForm.value.descriptionValidateur,
+    validationDevis: false,
+    utilisateur: this.getUtilisateur(),
+    prixHt: 1500.0,
+    tva: 1.2,
+    quantite: parseInt(this.devisForm.value.quantiteValidateur),
+    client: this.getClient(),
+    voiture: this.getVoiture(),
+    refusDevis: false,
+    annulationDevis: false
+ 
+      };
+      this.serviceDevis.put(url+'devis',devis.id, devis).subscribe(
+        ()=> this.router.navigate(['/commercial/listedevis'])
+      );
+    }
   initForm(){
     this.devisForm = this.formBuilder.group({
       clientValidateur:this.clientValidateur,
