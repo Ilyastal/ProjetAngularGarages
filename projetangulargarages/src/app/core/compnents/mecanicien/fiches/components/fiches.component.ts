@@ -101,7 +101,6 @@ export class FichesComponent implements OnInit {
 }
    
    logout(){
-     console.log('mecanicien fiche');
     this.serviceTache.logout();
   }
 }
