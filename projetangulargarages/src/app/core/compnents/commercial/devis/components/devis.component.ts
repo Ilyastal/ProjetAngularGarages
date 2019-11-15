@@ -41,7 +41,7 @@ export class DevisComponent implements OnInit {
               private router: Router,
               private route:ActivatedRoute,
               private formBuilder: FormBuilder) {
-              this.devis=null;
+              this.devis= null;
               this.route.params.subscribe((param: {id:number}) =>
                
               
@@ -56,12 +56,12 @@ export class DevisComponent implements OnInit {
                       this.initForm();
                       return;
                     }   
-                    this.clientValidateur= new FormControl(this.devis.client.nom, Validators.required);
-                    this.voitureValidateur= new FormControl(this.devis.voiture.nom, Validators.required);
+                    this.clientValidateur= new FormControl(this.devis.client.id, Validators.required);
+                    this.voitureValidateur= new FormControl(this.devis.voiture.id, Validators.required);
                     this.quantiteValidateur= new FormControl(this.devis.quantite, Validators.required);
                     this.descriptionValidateur= new FormControl(this.devis.description, Validators.required);
-                    this.initForm();             
-
+                    this.initForm(); 
+                    
               }
               
               )
@@ -150,6 +150,9 @@ export class DevisComponent implements OnInit {
         ()=> this.router.navigate(['/commercial/listedevis'])
       );
     }
+  
+   
+
   initForm(){
     this.devisForm = this.formBuilder.group({
       clientValidateur:this.clientValidateur,
@@ -160,12 +163,13 @@ export class DevisComponent implements OnInit {
   }
 
   getVoiture(): Voiture{
-    return this.saveListVoitures[this.devisForm.value.voitureValidateur];
+    return this.saveListVoitures.filter((item) => item.id === parseInt(this.devisForm.value.voitureValidateur))[0];
    
   }
 
   getClient() : Client {
-    return this.saveListClients[this.devisForm.value.clientValidateur];
+    console.log(this.devisForm.value.clientValidateur);
+    return this.saveListClients.filter((item) => item.id === parseInt(this.devisForm.value.clientValidateur))[0];
   }
   getUtilisateur(){
     return this.utilisateur;
